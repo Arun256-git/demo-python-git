@@ -88,7 +88,6 @@ def update_todo(todo_id: int, todo_update: TodoUpdate):
             return todo
     raise HTTPException(status_code=404, detail='Todo not found')
 
-
 @api.delete('/todos/{todo_id}', response_model=Todo)
 def delete_todo(todo_id: int):
     for index, todo in enumerate(all_todos):
